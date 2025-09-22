@@ -6,6 +6,7 @@ class User(SQLModel , table=True):
     id:int = Field(default=None , primary_key=True)
     name:str
     course:str
+    seat_number:str = Field(unique=True)
     dept_id:int = Field(foreign_key="dept.id")
 
     # Relationships
